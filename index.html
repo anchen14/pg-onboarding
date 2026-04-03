@@ -350,7 +350,7 @@
     </div>
     <div class="progress-divider"></div>
     <div class="progress-stat">
-      <div class="progress-num" id="total-count">14</div>
+      <div class="progress-num" id="total-count">15</div>
       <div class="progress-label">Required</div>
     </div>
     <div class="progress-divider"></div>
@@ -473,6 +473,13 @@
           <div class="item-desc">License activated and application installed</div>
         </div>
       </div>
+      <div class="item" data-id="capiq" data-section="sw" onclick="toggle(this)">
+        <div class="item-box"><svg class="checkmark" width="10" height="10" viewBox="0 0 10 10"><polyline points="1.5,5.5 4,8 8.5,2" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="item-body">
+          <div class="item-name">CapIQ Excel Plugin</div>
+          <div class="item-desc">Install plugin and confirm it loads correctly in Excel</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -583,14 +590,14 @@
 </footer>
 
 <script>
-  const REQUIRED_IDS = ['sharepoint','cmit','enav','payflex','bigtime','teams','outlook','adobe','esgauge','intelligize','diligent','mdg','wsj','agenda'];
+  const REQUIRED_IDS = ['sharepoint','cmit','enav','payflex','bigtime','teams','outlook','adobe','capiq','esgauge','intelligize','diligent','mdg','wsj','agenda'];
   const state = {};
 
   const sectionCounts = {
     access: { required: ['sharepoint','cmit'], el: 'count-access' },
     finance: { required: ['enav','payflex','bigtime'], el: 'count-finance' },
     ms: { required: ['teams','outlook'], el: 'count-ms' },
-    sw: { required: ['adobe'], el: 'count-sw' },
+    sw: { required: ['adobe','capiq'], el: 'count-sw' },
     data: { required: ['esgauge','intelligize','diligent','mdg','wsj','agenda'], el: 'count-data' },
     opt: { required: [], el: 'count-opt', ids: ['candid','edgar','emailsig','linkedin'] }
   };
